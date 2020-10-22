@@ -6,14 +6,13 @@ echo %gs%
 set folder_log=C:\Users\Administrator\Transforms\TestSAP2AFP\Log\win
 echo %folder_log%
 
-
-set folder_out=e:\OutputTransformSAP2AFP\win\output
+set folder_out=e:\OutputTransformSAP2AFP\win\output\out_TIFF\MasterFiles\SAP\
 echo %folder_out%
 
-set folder_in=e:\OutputTransformSAP2AFP\win\output\output_PDF\TestFiles\
-echo %folder_in%
+set folderIN=e:\OutputTransformSAP2AFP\win\output\out_PDF\TestFiles\SAP\
+echo %folderIN%
 
-for /R %folder_in% %%i in (*.pdf) do (
+for /R %folderIN% %%i in (*.pdf) do (
 
 ECHO File drive is **************:   filedrive=%%~di
 ECHO File path is **************:  filepath=%%~pi
@@ -27,13 +26,10 @@ ECHO File extention is **************: fileextension=%%~xi
 
  ) >> %folder_log%\all_PDF2TIFF_itm-driver.log 2>&1
 
-
-
 echo ================================================
 
-echo Copy.... %folder_out%\output_PDF\TestFiles\PDF\*.tif %folder_out%\out_TIFF\MasterFiles\PDF\
-xcopy /y /s /d  %folder_out%\output_PDF\TestFiles\PDF\*.tif %folder_out%\out_TIFF\MasterFiles\PDF\ >> %folder_log%\all_PDF2TIFF_itm-driveraaaa.log 2>&1
-
+echo Copy.... e:\OutputTransformSAP2AFP\win\output\out_PDF\TestFiles\*.tif E:\OutputTransformSAP2AFP\win\output\out_TIFF\MasterFiles\
+xcopy /y /s /d  e:\OutputTransformSAP2AFP\win\output\out_PDF\TestFiles\*.tif E:\OutputTransformSAP2AFP\win\output\out_TIFF\MasterFiles\ >> C:\Users\Administrator\Transforms\TestSAP2AFP\Log\win\all_PDF2TIFF_itm-driveraaaa.log 2>&1
 
 echo EXIT
 echo EXIT

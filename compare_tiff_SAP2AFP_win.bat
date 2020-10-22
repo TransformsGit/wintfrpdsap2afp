@@ -4,9 +4,9 @@ time /T >> regr.log
 
 
 set TTDIR=c:\TESTTOOLS\
-set MASTERDIR=e:\MasterFiles\PDF\
+set MASTERDIR=e:\MasterFiles\SAP\
 set CMPDIR=e:\OutputTransformSAP2AFP\win\output\out_TIFF\
-set folder_log=C:\Users\Administrator\Transforms\TestPDF2AFP_CPSI\Log\win
+set folder_log=C:\Users\Administrator\Transforms\TestSAP2AFP\Log\win
 
 echo running tiffcompare >> regr.log
 set CURDIR=%CD%

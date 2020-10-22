@@ -1,13 +1,11 @@
-
 echo off
-
 set submition_tool=c:\Users\Administrator\Transforms\itm_driver_win.exe
 echo %submition_tool%
 
-set folder_in=e:\OutputTransformSAP2AFP\win\output\out_AFP\TestFiles\
+set folder_in=e:\OutputTransformSAP2AFP\win\output\out_AFP\TestFiles\SAP\
 echo %folder_in%
 
-set folder_out=e:\OutputTransformSAP2AFP\win\output\out_PDF\TestFiles\
+set folder_out=e:\OutputTransformSAP2AFP\win\output\out_PDF\TestFiles\SAP\
 echo %folder_out%
 
 set all_folders=e:\OutputTransformSAP2AFP\win\output\
@@ -18,7 +16,7 @@ set /p itm_ipaddress=< %c:\Users\Administrator\Transforms\itm_ipaddress_SAP2AFP_
 echo %itm_ipaddress%
 
 
-set folder_log=e:\OutputTransformSAP2AFP\win\output\out_PDF\TestFiles\
+set folder_log=C:\Users\Administrator\Transforms\TestSAP2AFP\Log\win
 echo %folder_log%
 
 
@@ -41,8 +39,8 @@ echo %submition_tool% -S %itm_ipaddress% -P 6986 -F"-itm_in_files %%i -itm_out_f
  
 echo ================================================
 
-echo Copy.... %folder_in%\*.pdf %folder_out%
-xcopy /y /s /d %folder_in%\*.pdf %folder_out% >> %folder_log%\allcopy_afp2pdf_itm-driver.log 2>&1
+echo Copy.... %folder_in%*.pdf %folder_out%
+xcopy /y /s /d %folder_in%*.pdf %folder_out% >> %folder_log%\allcopy_afp2pdf_itm-driver.log 2>&1
 
 echo EXIT
 echo EXIT
